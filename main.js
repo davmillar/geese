@@ -1,5 +1,4 @@
-var pLoc = 0,
-    events = [0],
+var currentLocation = 0,
     gameAreas = {
       a0: {
         name: "Home",
@@ -67,13 +66,13 @@ var pLoc = 0,
     },
 
     goLocation = function (next) {
-      if (pLoc != next) {
-        gid("map" + pLoc).setAttribute("class",gameAreas["a" + pLoc].status);
-        pLoc = next;
-        gid("map" + pLoc).setAttribute("class",gameAreas["a" + pLoc].status + " here");
-        gid("currentlocation").innerHTML = gameAreas["a" + pLoc].name;
-        gid("action").setAttribute("class",gameAreas["a" + pLoc].status);
-        populateChoices(pLoc);
+      if (currentLocation != next) {
+        gid("map" + currentLocation).setAttribute("class",gameAreas["a" + currentLocation].status);
+        currentLocation = next;
+        gid("map" + currentLocation).setAttribute("class",gameAreas["a" + currentLocation].status + " here");
+        gid("currentlocation").innerHTML = gameAreas["a" + currentLocation].name;
+        gid("action").setAttribute("class",gameAreas["a" + currentLocation].status);
+        populateChoices(currentLocation);
       }
     },
 
