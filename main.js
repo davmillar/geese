@@ -58,12 +58,6 @@ var currentLocation = 0,
     gid = function (id) {
       return document.getElementById(id);
     },
-    hide = function (id) {
-      $("#" + id).fadeOut("slow");
-    },
-    show = function (id) {
-      $("#" + id).fadeIn("slow");
-    },
 
     goLocation = function (next) {
       if (currentLocation != next) {
@@ -99,16 +93,12 @@ var currentLocation = 0,
             gid("choicebox").appendChild(a);
           }
         }
-        $("#choicebox").fadeIn("slow");
-      } else {
-        $("#choicebox").fadeOut("slow");
       }
     },
 
     do0 = function () {
       goLocation(0);
       gid("description").innerHTML = "<p>Geese! Geese everywhere! Millions of them! You are safe here... for now.</p>";
-      hide("choicebox");
       return false;
     },
 

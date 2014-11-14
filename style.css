@@ -4,7 +4,7 @@ body {
   font-size: 12px;
 }
 
-h1, h3 {
+h1 {
   margin: 5px 10px;
   padding: 0;
   letter-spacing: 0.15em;
@@ -79,26 +79,33 @@ a {
   }
 
   #choicebox {
-    margin:10px 15px;
-    display: none;
-    letter-spacing: 0.1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: stretch;
   }
 
   #choicebox a {
-    margin: 5px;
-    padding: 2px 4px;
-    background: #000;
-    white-space:nowrap;
-    transition:all .3s ease;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    display: inline-block;
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.5em 1em;
+    line-height: 1.5em;
+    color: #000;
+    border: 2px solid #000;
+    opacity: 0.5;
+    margin: 1px;
+    transition: all .3s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+  }
+
+  #choicebox a:hover {
+    opacity: 1;
   }
 
   .clear #geesemessage { display: none; }
-  .clear #choicebox a { color: #090; }
-  .clear #choicebox a:hover { color: #0F0; }
-
   .geese #geesemessage { display: block; }
-  .geese #choicebox a { color: #930; }
-  .geese #choicebox a:hover { color: #F90; }
