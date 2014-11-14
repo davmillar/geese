@@ -78,13 +78,13 @@ a {
     letter-spacing: 0.15em;
   }
 
-  #action #choicebox {
+  #choicebox {
     margin:10px 15px;
     display: none;
     letter-spacing: 0.1em;
   }
 
-  #action #choicebox a {
+  #choicebox a {
     margin: 5px;
     padding: 2px 4px;
     background: #000;
@@ -95,10 +95,10 @@ a {
     border-radius: 5px;
   }
 
-  #action.clear #geesemessage { display: none; }
-  #action.clear #choicebox a { color: #090; }
-  #action.clear #choicebox a:hover { color: #0F0; }
+  .clear #geesemessage { display: none; }
+  .clear #choicebox a { color: #090; }
+  .clear #choicebox a:hover { color: #0F0; }
 
-  #action.geese #geesemessage { display: block; }
-  #action.geese #choicebox a { color: #930; }
-  #action.geese #choicebox a:hover { color: #F90; }
+  .geese #geesemessage { display: block; }
+  .geese #choicebox a { color: #930; }
+  .geese #choicebox a:hover { color: #F90; }
